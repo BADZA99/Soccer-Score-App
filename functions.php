@@ -1,7 +1,8 @@
 <?php
 
 function initiateAPI(){
-    $url= "https://api.soccersapi.com/v2.2/fixtures/?user=pndiaye999&token=d3a3a946de61601e4435f133c7d48e3b&t=schedule&d=2021-08-13&league_id=1609";
+    $date=date('Y-m-d');
+    $url= "https://api.soccersapi.com/v2.2/fixtures/?user=pndiaye999&token=d3a3a946de61601e4435f133c7d48e3b&t=schedule&d=.$date.&league_id=1609";
     // init call
     $curl=curl_init($url);
 
